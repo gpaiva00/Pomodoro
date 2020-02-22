@@ -1,3 +1,5 @@
+$pieColor = #9051cf
+
 border-radius()
   -webkit-border-radius: arguments
   -moz-border-radius: arguments
@@ -10,14 +12,23 @@ body
   @import 'mobile.styl'
 
 #optionsContainer 
-  // background-color darkgrey
-  // background #059
+  display flex
+  flex-direction column
+  align-items center
+  justify-content space-between
 
-#pieContainer 
-  // background-color #ff05
+  & .timerOptions
+    & button 
+      // margin 0 45px
+      width 60px
+      height 60px
+      border-radius 100%
+      background $pieColor
+      color #fff
+      border 2px solid #552387
+      cursor pointer
 
 #timer
-  // background #0028
   margin-top 15px
   height 50px
   border-radius 5px
