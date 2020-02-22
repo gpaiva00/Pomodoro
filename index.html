@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/pie.css"/>
+  <title>Pomodoro</title>
+</head>
+<body>
+  <div class="container-fluid" style="margin-top: 15vh;">
+    <div class="row">
+      <!-- status -->
+      <div id="statusContainer" class="col-xs-4">
+        <div class="status-tile row"></div>
+        <div class="status-tile row"></div>
+      </div>
+  
+      <div id="pieContainer" class="col-xs-4">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="pie" style="--color: #000; --size: 300">
+              <div class="pie__segment" style="--offset: 0; --value: 10; --over50: 0; --bg: #db0a5b"></div>
+              <!-- <div class="pie__segment" style="--offset: 70; --value: 90; --bg: #2ecc71"></div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row center-xs">
+          <div class="col-xs-6">
+            <div id="timer"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="optionsContainer" class="col-xs-4 end-xs">
+        <div class="row">
+          <div class="col-xs-12">
+            <input type="number" name="" id="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <input type="number" name="" id="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<script src="assets/js/index.js"></script>
