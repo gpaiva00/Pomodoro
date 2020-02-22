@@ -13,9 +13,6 @@ body
   // background-color darkgrey
   // background #059
 
-#statusContainer
-  // background #0505
-
 #pieContainer 
   // background-color #ff05
 
@@ -25,32 +22,7 @@ body
   height 50px
   border-radius 5px
 
-// tiles
-.status-tile
-  width 100px
-  height 40px
-  background #c4c8cf
-  border-radius 5px
-  display flex
-  flex-direction row
-  justify-content center
-  align-items center
-
-  &:first-child
-    margin-bottom 15px
-  
-  & p
-    display none
-  & i
-    opacity 0.1
-    margin-right 15px
-  
-  &.active-tile
-    width 300px
-    height 120px
-    background #68c7f2
-    & p
-      display initial
-      font-size 20px
-    & i 
-      opacity 1
+.nobreak
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap

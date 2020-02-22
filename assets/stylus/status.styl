@@ -1,0 +1,33 @@
+$statusSpeed = 0.5s
+
+// tiles
+.status-tile
+  width 100px
+  height 40px
+  background #c4c8cf
+  border-radius 5px
+  display flex
+  flex-direction row
+  justify-content center
+  align-items center
+  transition width $statusSpeed, height $statusSpeed, opacity $statusSpeed
+  transition-timing-function ease-out
+
+  &:first-child
+    margin-bottom 15px
+  
+  & p
+    display none
+  & i
+    opacity 0.1
+    margin-right 15px
+  
+  &.active-tile
+    width 300px
+    height 120px
+    background #68c7f2
+    & p
+      display initial
+      font-size 20px
+    & i 
+      opacity 1
