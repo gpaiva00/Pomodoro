@@ -6,6 +6,9 @@ border-radius()
 body
   overflow-x hidden
 
+@media screen and (max-width: 600px)
+  @import 'mobile.styl'
+
 #optionsContainer 
   // background-color darkgrey
   // background #059
@@ -24,8 +27,30 @@ body
 
 // tiles
 .status-tile
-  width 200px
-  height 80px
-  background #666
+  width 100px
+  height 40px
+  background #c4c8cf
   border-radius 5px
-  margin 15px auto
+  display flex
+  flex-direction row
+  justify-content center
+  align-items center
+
+  &:first-child
+    margin-bottom 15px
+  
+  & p
+    display none
+  & i
+    opacity 0.1
+    margin-right 15px
+  
+  &.active-tile
+    width 300px
+    height 120px
+    background #68c7f2
+    & p
+      display initial
+      font-size 20px
+    & i 
+      opacity 1

@@ -6,18 +6,26 @@
   <link rel="stylesheet" type="text/css" href="assets/css/index.css"/>
   <link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.min.css"/>
   <link rel="stylesheet" type="text/css" href="assets/css/pie.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/toggle.css"/>
+  <script src="https://kit.fontawesome.com/89bbd3450e.js" crossorigin="anonymous"></script>
   <title>Pomodoro</title>
 </head>
 <body>
   <div class="container-fluid" style="margin-top: 15vh;">
     <div class="row">
       <!-- status -->
-      <div id="statusContainer" class="col-xs-4">
-        <div class="status-tile row"></div>
-        <div class="status-tile row"></div>
+      <div id="statusContainer" class="col-sm-4 col-xs-12">
+        <div class="status-tile active-tile">
+          <i class="fas fa-mug-hot fa-2x"></i>
+          <p>Bora fazer uma pausinha?</p>
+        </div>
+        <div class="status-tile">
+          <i class="fas fa-laptop-code fa-2x"></i>
+          <p>Hora de voltar com tudo!</p>
+        </div>
       </div>
-  
-      <div id="pieContainer" class="col-xs-4">
+      <!-- pie -->
+      <div id="pieContainer" class="col-sm-4 col-xs-12">
         <div class="row">
           <div class="col-xs-12">
             <div class="pie" style="--color: #000; --size: 300">
@@ -32,8 +40,17 @@
           </div>
         </div>
       </div>
-      
-      <div id="optionsContainer" class="col-xs-4 end-xs">
+      <!-- options -->
+      <div id="optionsContainer" class="col-sm-4 col-xs-12 end-xs">
+        <div class="row">
+          <div class="col-xs-12">
+            <label class="toggle">
+              <input class="toggle-checkbox" type="checkbox">
+              <div class="toggle-switch"></div>
+              <span class="toggle-label">Dark Mode</span>
+            </label>
+          </div>
+        </div>
         <div class="row">
           <div class="col-xs-12">
             <input type="number" name="" id="">
@@ -42,6 +59,17 @@
         <div class="row">
           <div class="col-xs-12">
             <input type="number" name="" id="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="col-xs-4">
+            <i class="fas fa-pause"></i>
+          </div>
+          <div class="col-xs-4">
+            <i class="fas fa-undo-alt"></i>
           </div>
         </div>
       </div>
