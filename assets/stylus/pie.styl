@@ -41,6 +41,7 @@ $pieColor = #3a393b
       --degrees calc((var(--value, 45) / 100) * 360)
       transform translate(0, 100%) rotate(calc(var(--degrees) * 1deg))
       transform-origin 50% 0%
+      transition transform 1s linear
 
     &:after
       opacity var(--over50, 0)

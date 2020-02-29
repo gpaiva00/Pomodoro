@@ -6,8 +6,6 @@ const breakValue = document.getElementById('breakValue'),
       breakTile = document.getElementById('breakTile'),
       workingTile = document.getElementById('workingTile');
 
-
-var intervalSecs = 0;
 var currentStatus = {}
   
 function start() {
@@ -18,11 +16,11 @@ function start() {
     currentStatus.time = Number(workingValue.value);
   }
 
-  console.log({ status: currentStatus.status, time: currentStatus.time });
+  // console.log({ status: currentStatus.status, time: currentStatus.time });
 
   // get break and working values
   // calc interval pie animation
-  // intervalSecs = (currentStatus.time * 60 ) / 360;
+  pieCalc = 100 / (currentStatus.time * 60);
   
   startTimer();
   startPie();

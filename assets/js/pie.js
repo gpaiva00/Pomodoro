@@ -1,21 +1,22 @@
 const pie = document.querySelector('.pie')
 const actions = document.querySelector('.actions')
 const segments = pie.children
-let count = 0;
+var pieCount = 0;
+var pieCalc = 0;
 var pieInterval = null;
 
 function updateSegment() {
+  pieCount += pieCalc;
 
-  if(count === 100) {
+  if(pieCount === 100) {
     restartPie();
     return;
   }
-  // const idx = [...actions.children].indexOf(e.target)
-  const key = 'value';
+  
   const toUpdate = segments[0];
-  toUpdate.style.setProperty(`--${key}`, count++);
+  toUpdate.style.setProperty('--value', pieCount);
 
-  if(count > 50) toUpdate.style.setProperty('--over50', 1);
+  if(pieCount > 50) toUpdate.style.setProperty('--over50', 1);
 }
 
 function restartPie() {
@@ -23,10 +24,13 @@ function restartPie() {
   segments[0].style.setProperty('--value', 0);
   segments[0].style.setProperty('--offset', 0);
   segments[0].style.setProperty('--over50', 0);
+
+  pieCount = 0;
+  pieCalc = 0;
 }
 
 function startPie() {
-  pieInterval = setInterval(updateSegment, intervalSecs);
+  pieInterval = setInterval(updateSegment, 1000); //intervalSecs
 }
 
 // start();
