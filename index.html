@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- favicon -->
+  <link class="favIcon" rel="apple-touch-icon" sizes="180x180" href="assets/img/defaultFav/apple-touch-icon.png">
+  <link class="favIcon" rel="icon" type="image/png" sizes="32x32" href="assets/img/defaultFav/favicon-32x32.png">
+  <link class="favIcon" rel="icon" type="image/png" sizes="16x16" href="assets/img/defaultFav/favicon-16x16.png">
+  <link class="favIcon" rel="manifest" href="assets/img/defaultFav/site.webmanifest">
+  <!-- default configs -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="assets/css/index.css"/>
@@ -16,11 +22,11 @@
     <div class="row">
       <!-- status -->
       <div id="statusContainer" class="col-sm-4 col-xs-12">
-        <div class="status-tile active-tile">
+        <div id="breakTile" class="status-tile">
           <i class="fas fa-mug-hot fa-2x"></i>
           <p class="nobreak">Bora fazer uma pausinha?</p>
         </div>
-        <div class="status-tile">
+        <div id="workingTile" class="status-tile">
           <i class="fas fa-laptop-code fa-2x"></i>
           <p class="nobreak">Hora de voltar com tudo!</p>
         </div>
@@ -30,7 +36,7 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="pie" style="--color: #000; --size: 300">
-              <div class="pie__segment" style="--offset: 0; --value: 10; --over50: 0; --bg: #db0a5b"></div>
+              <div id="pieSegment" class="pie__segment" style="--offset: 0; --value: 0; --over50: 0; --bg: #db0a5b"></div>
               <!-- <div class="pie__segment" style="--offset: 70; --value: 90; --bg: #2ecc71"></div> -->
             </div>
           </div>
@@ -45,36 +51,34 @@
       </div>
       <!-- options -->
       <div id="optionsContainer" class="col-sm-4 col-xs-12 end-xs">
-        <div class="row">
+        <div class="row darkMode">
           <div class="col-xs-12">
             <label class="toggle">
               <input class="toggle-checkbox" type="checkbox">
               <div class="toggle-switch"></div>
-              <span class="toggle-label">Dark Mode</span>
+              <span class="toggle-label"><i class="fas fa-adjust"></i></span>
             </label>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <input type="number" name="" id="">
+        <div class="timerValues">
+          <div>
+            <input type="number" name="" id="breakValue" placeholder="5"/>
+            <label for="breakValue">min Break</label>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <input type="number" name="" id="">
+          <div>
+            <input type="number" name="" id="workingValue" placeholder="25">
+            <label for="workingValue">min Working</label>
           </div>
         </div>
         <div class="row timerOptions">
           <div class="col-xs-6">
-            <button>
+            <button id="startButton" onclick="start()">
               <i class="fas fa-play fa-2x"></i>
+              <!-- <i class="fas fa-pause"></i> -->
             </button>
           </div>
-          <!-- <div class="col-xs-6">
-            <i class="fas fa-pause"></i>
-          </div> -->
           <div class="col-xs-6">
-            <button>
+            <button id="restartButton" onclick="restart()">
               <i class="fas fa-undo-alt fa-2x"></i>
             </button>
           </div>
@@ -85,7 +89,7 @@
 </body>
 </html>
 
-<script src="assets/js/index.js"></script>
-<script src="assets/js/status.js"></script>
-<script src="assets/js/pie.js"></script>
 <script src="assets/js/timer.js"></script>
+<script src="assets/js/pie.js"></script>
+<script src="assets/js/status.js"></script>
+<script src="assets/js/index.js"></script>
