@@ -33,4 +33,8 @@ function startPie() {
   pieInterval = setInterval(updateSegment, 1000); //intervalSecs
 }
 
+function calculatePieAnimation(currentStatusTime) {
+  return 100 / (currentStatusTime * 60)
+}
+
 // start();

@@ -18,9 +18,8 @@ function start() {
 
   // console.log({ status: currentStatus.status, time: currentStatus.time });
 
-  // get break and working values
   // calc interval pie animation
-  pieCalc = 100 / (currentStatus.time * 60);
+  pieCalc = calculatePieAnimation(currentStatus.time);
   
   startTimer();
   startPie();
